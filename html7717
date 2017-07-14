@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<title>chocolate demo
+</title>
+<style>
+body{
+background-color:#493267;
+}
+</style>
+</head>
+<body>
+<img src="https://image.slidesharecdn.com/cadburyfinal-090901134302-phpapp02/95/cadbury-final-3-728.jpg?cb=1251812632" alt="cadbury"style="widht:200px;height:200px;"/><h1 style="color:white;text-align:center;font-size:70px;margin:upper">dairy milk chocolate</h1>
+<img src="https://img.tradeindia.com/fp/1/001/920/308.jpg" alt="dairy milk" style="width:2000px;height:228px;">
+</body>
+</html>
+
