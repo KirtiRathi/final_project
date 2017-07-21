@@ -5,9 +5,11 @@ from django.db import models
 
 # Create your models here.
 
-class User(models.Model):
+class UserModel(models.Model):
+    email=models.EmailField()
     name = models.CharField(max_length=255)
-    phone = models.CharField(max_length=30)
-    age = models.IntegerField(default=0)
+    username=models.charField(max_lenght=120)
+    password=models.charField(max_lenght=40)
     created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
 
