@@ -1,38 +1,54 @@
 
-ctype html>
+<!DOCtype html>
 <html>
 	<head>
 		<title>login</title>
 
+
 		<meta charset="utf-8">
     		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    		<meta name="viewport" content="width=device-width, initial-scale=1"
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!--Bootstrap-->
 		<link href="css/bootstrap.css" rel="stylesheet">
 	</head>
-	<body>
+
+
+
+
+	<body background="http://site-cdn.microapps.com/wp-content/uploads/2015/12/24268-steampunk-pocket-watch-1920x1080-photography-wallpaper.jpg">
+
+
+	     <td colspan=2><center><font size=4><b>
+         <div class="background-image"></div>
+         <div class="content">
+         </div>
+
 		<div>
-			<h1>instagram clone</h1>
-			<h3>login</h3>
+			<h1>INSTAGRAM CLONE</h1>
+			<h3>LOGIN</h3>
 			<form method="post">
 				{% csrf_token %}
 
+
 				<div>
                 <label for="username">Username: </label>
-                <input id="username" type="text" name="username" value="">
+                <input id="username" type="text" name="username" value="{{ username }}">
             </div>
 
 
             <div>
                 <label for="password">Password: </label>
-                <input id="password" type="password" name="password" value="">
+                <input id="password" type="password" name="password" value="{{ password }}">
             </div>
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" style="height:500px; width:50px;" >
+
 
 			</form>
 
-		</div><br><br>
+		</div>
+
+			 <br><br>
 
 		<!--Javascript files-->
 		<!--Jquery library-->
@@ -40,5 +56,6 @@ ctype html>
 		<!--Bootstrap js Library-->
 		<script src="js/bootstrap.js"></script>
 	<div><h3>Already a user?</h3><a href="login/">Login</a> </div>
+			 </b></font></center></td>
 	</body>
 </html>
