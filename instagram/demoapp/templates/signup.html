@@ -10,37 +10,79 @@
 
 		    <!--Bootstrap-->
 		<link href= "css/bootstrap.css" rel="stylesheet">
+
+
+		       <style>
+body{
+background-repeat: no-repeat;
+background-position: 50 50;
+}
+</style>
+<script >
+
+var imgs=new Array()
+imgs[0]="https://pbs.twimg.com/media/C_C4rnmWAAAgeaE.png";
+imgs[1]="http://media-cdn.list.ly/production/148890/headline.jpeg?ver=2116314186";
+imgs[2]="http://www.wenews.co.in/wp-content/uploads/2017/01/swachh-bharat-abhiyan.jpg";
+var speed=2000
+var processed=new Array()
+for (i=0;i<imgs.length;i++){
+processed[i]=new Image();
+processed[i].src=imgs[i];
+}
+var inc=-1;
+function slideimg(){
+if (inc<imgs.length-1)
+inc++;
+else
+inc=0;
+document.body.background=processed[inc].src;
+}
+if (document.all||document.getElementById)
+window.onload=new Function('setInterval("slideimg()",speed)');
+
+
+
+
+
+
+</script>
 	</head>
-        <body>
+
+        	<body>
+
+
+
+
 
          <td colspan=2><center><font size=4><b>
 		<div>
 			<h1>INSTAGRAM CLONE</h1>
 			<h3>Sign Up</h3>
-			<h4>today date and time:{{ today }}</h4>
+			
 			<form method="post">
 				{% csrf_token %}
 
 				<div>
-                <label for="username">Username: </label>
+                <label for="username">Username:  </label>
                 <input id="username" type="text" name="username" value={{ username }}>
-            </div>
+            </div><br/>
 
             <div>
-                <label for="name">Name: </label>
-                <input id="name" type="text" name="name" value={{ name }}>
-            </div>
+                <label for="name">Name:  </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="name" type="text" name="name" value={{ name }}>
+            </div><br/>
 
             <div>
                 <label for="email">Email: </label>
-                <input id="email" type="text" name="email" value={{ email }}>
-            </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="email" type="text" name="email" value={{ email }}>
+            </div><br/>
 
             <div>
                 <label for="password">Password: </label>
                 <input id="password" type="password" name="password" value={{ password }}>
-            </div>
-                <input type="submit" value="Sign Up"  style="height: 100px; width: 100px">
+            </div><br/>
+                <input type="submit" value="Sign Up"  style=font-size:10pt;color:black;background-color:#07c;border:2px;height:35px;width:90px">
 
 			</form>
 
@@ -52,6 +94,6 @@
 		<script src="js/bootstrap.js"></script>
 	<div><h3>Already a user?</h3><a href="login/">Login</a> </div>
 	 </b></font></center></td>
-	 </div>
+
 	</body>
 </html>

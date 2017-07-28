@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-    <form method="post" action="/post/">
-        {% csrf_token %}
-        <input type="submit" class="btn-default btn" value="Create Post">
-    </form>
+		<body background="https://i.ytimg.com/vi/D4YR3DlDY4A/maxresdefault.jpg">
+
+        <a class="btn-default btn" href="/post/">Create new post</a>
 
     {% for post in posts %}
 
